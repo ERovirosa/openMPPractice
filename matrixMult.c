@@ -10,7 +10,7 @@ Practice using openMP by doing matrix multiplication
 #include <omp.h>
 
 int size = 500;
-int NUMT = 16;
+int NUMT = 4;
 void createMatrix(int Matrix [size][size])
 {
 	for(int x=0; x<size; x++)
@@ -94,7 +94,7 @@ int main (void)
 		Multiply(M1, M2, FinalMatrix);
 	}
 	double time1 = omp_get_wtime();
-	printf("Elapsed time = %10.2lf microsecondSSSS\n", 1000000*(time1-time0));
+	printf("Elapsed time = %10.2lf microseconds\n", 1000000*(time1-time0));
 	//printf("Answer:\n");
 	//writeMatrix(FinalMatrix);
 }
